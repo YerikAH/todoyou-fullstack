@@ -1,0 +1,32 @@
+
+
+{% macro render_task(task,delete_form,update_form) %}
+  <li class="row taskstyle" style="margin: 1rem 0;"> 
+    
+    <div class="col">
+      <span  class="badge text-bg-primary col">
+        
+        {% if task.to_dict().done%}
+          Done
+        {% else %}
+        Not done
+        {% endif %}
+      
+      
+      </span>
+      <b style="font-weight:600">Descripción:</b> {{ task.to_dict().description }}
+    </div>
+    <div class="col" style="display: grid;align-items: center;justify-content: end;grid-template-columns: auto auto;gap: 1rem;">
+      
+          
+      
+      <form  class="col" action="{{ url_for('update',todo_id=task.id, done=task.to_dict().done)}}" method="POST">
+        {{update_form.submiUpdate(class_="btn btn-outline-primary")}} 
+      </form> 
+      <form class="col" action="{{ url_for('delete',todo_id=task.id)}}" method="POST">
+        {{delete_form.submiDelete(class_="btn btn-outline-secondary")}} 
+      </form> 
+
+    </div>
+</li>
+{% endmacro %}

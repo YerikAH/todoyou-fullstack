@@ -1,0 +1,20 @@
+<nav style="width: 100vw;display: flex;justify-content: center;align-items: center;">
+  <ul class="nav_ul">
+    <li id="home"><a  href="{{ url_for('index') }}">Home</a></li>
+    <li><a href=""><img src="{{ url_for('static', filename='images/logo.svg') }}"/></a></li>
+    <li id="creator"><a  href="https://yerikah.github.io/briefcase/" target="_blank">About creator</a></li>
+    <button id="ham" style="background: transparent;border: none;">
+      <img style="width: 20px;" src="{{ url_for('static', filename='images/ham.svg') }}" alt="" id="hamOpen">
+      <img style="width: 20px; display:none" src="{{ url_for('static', filename='images/hamclose.svg') }}" alt="" id="hamClose">
+    </button>
+  </ul>
+</nav>
+<div class="options" style="display:none;background: white;padding: 0 1rem;" id="menuMobile">
+  <li ><a  href="{{ url_for('index') }}">Home</a></li>
+  <li ><a  href="https://yerikah.github.io/briefcase/" target="_blank">About creator</a></li>
+  <li ><a  href="{{ url_for('login') }}">Log in</a></li>
+  <li ><a  href="{{ url_for('signup') }}">Sign up</a></li>
+</div>
+{% if current_user.is_authenticated %}
+  <a href="{{ url_for('logout') }}" class="button-all end" style="background: #ea6262;opacity: 0.8;">Logout</a>
+{% endif %}

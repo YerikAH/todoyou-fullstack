@@ -1,0 +1,163 @@
+.nav_ul img {
+  width: 6rem;
+}
+nav a {
+  color: #232323;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #060606;
+  letter-spacing: 1px;
+}
+.nav_ul {
+  display: flex;
+  max-width: 1280px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  box-shadow: 0px 4px 10px rgba(47, 108, 200, 0.1);
+}
+/* Error */
+.grid-error {
+  display: grid;
+  padding: 5rem 3rem;
+  gap: 4rem;
+}
+.grid-error_responsive__img img {
+  width: 100%;
+  max-width: 364px;
+}
+.grid-error_responsive__img,
+.grid-error_text {
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.grid-error_text {
+  align-items: center;
+}
+.grid-error_text h1 {
+  width: 100%;
+  font-size: 3rem;
+  letter-spacing: 0.05em;
+  color: #121d2f;
+  font-weight: 700;
+}
+.grid-error_text p {
+  font-size: 16px;
+  line-height: 30px;
+  color: #232323;
+  margin: 2rem 0;
+}
+.button-all {
+  background: #2f6cc8;
+  border-radius: 10px;
+  border: none;
+  padding: 0.8rem 2rem;
+  color: white;
+  font-size: 1rem;
+  display: block;
+  margin-top: 1rem;
+  transition: 0.3s;
+}
+.button-all:hover {
+  background: #5c93e5;
+  color: white;
+}
+@media (min-width: 900px) {
+  .grid-error {
+    max-width: 1280px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 90vh;
+    padding: 0 3rem;
+  }
+  #ham {
+    display: none;
+  }
+  .grid-error_text {
+    align-items: start;
+  }
+}
+@media (max-width: 900px) {
+  .grid-error_text h1 {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  .grid-error_text p {
+    max-width: 500px;
+    text-align: center;
+  }
+}
+.someform {
+  display: grid;
+  gap: 0.5rem;
+}
+.end {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2rem;
+}
+.end:hover {
+  opacity: 1 !important;
+}
+.f-sec {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.controler-desing {
+  width: 100%;
+  max-width: 530px;
+}
+@media (min-width: 900px) {
+  .nav_ul {
+    justify-content: space-evenly;
+  }
+  .controler-desing {
+    padding: 0 5rem;
+  }
+  .grid-error {
+    gap: 0;
+  }
+  .options {
+    display: none;
+  }
+}
+.other_form {
+  display: grid;
+  grid-template-columns: 76% 20%;
+  gap: 4%;
+  margin: 2rem 0 4rem 0;
+}
+.button-create {
+  color: white;
+  background: #2f6cc8;
+  border-radius: 10px;
+  border: none;
+}
+@media (max-width: 900px) {
+  .taskstyle {
+    display: grid !important;
+    place-items: center;
+    place-content: center;
+    width: 100%;
+    margin: 3rem 0 !important;
+    gap: 1rem;
+  }
+  .taskstyle div {
+    justify-content: center !important;
+  }
+  #home,
+  #creator {
+    display: none;
+  }
+}

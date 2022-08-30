@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% block titlechange %} 
+  Internal server error 500
+{% endblock %}
+
+{% block content %}
+  <div class="grid-error">
+    <div class="grid-error_responsive__img">
+      <img src="{{ url_for('static', filename='images/error500.svg') }}" alt="not found" >
+    </div>
+    <div class="grid-error_text">
+      <h1>500 INTERNAL SERVER ERROR</h1>
+      <p>We have some errors with the server, try again in a while, why don't you try going to the start.</p>
+      <a href="{{ url_for('index') }}" class="button-all">Go to home</a>
+    </div>
+  </div>
+{% endblock %}

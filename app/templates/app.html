@@ -1,0 +1,46 @@
+{% extends 'index.html' %}
+{% import 'macros.html' as macros %}
+
+
+{% block titlechange %} 
+  app
+{% endblock %}
+
+{% block content %}
+
+<div class="container-app" style="width: 100%;max-width: 1000px;padding: 1rem 2rem;">
+  {% for message in get_flashed_messages() %}
+  
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  {% endfor %}
+
+  {% if fullname %}
+  <h3 style="text-align: center;font-weight: 300;font-size: 2rem;margin-bottom: 1rem"> WELCOME {{fullname | upper }}</h3>
+  {% endif %}
+
+  {% if ip_get %}
+    <h1 style="text-align: center;font-size: 1rem;font-weight: bold;" >HELLO USER, YOUR IP IS {{ip_get}} </h1>
+  {% else %}
+    <h1 style="text-align: center;font-size: 1rem;font-weight: bold;">HELLO USER </h1>
+    <br>
+    <a href="{{ url_for('index') }}">You should make click here.</a>
+  {% endif%}
+
+
+  <div class="container_todo">
+    <form action="{{ url_for('center')}}" method="POST" class="form_todo other_form">
+      {{todo_form.description(class_="form-control")}} 
+      {{todo_form.submit(class_="button-create")}} 
+    </form>
+  </div>
+
+  <ul style="padding: 0;">
+    {% for taskLittle in task%}
+      {{ macros.render_task(taskLittle,delete_form,update_form) }}
+    {% endfor %}
+  </ul>
+</div>
+{% endblock %}

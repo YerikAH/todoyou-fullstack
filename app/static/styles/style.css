@@ -1,0 +1,17 @@
+@import url("./app.css");
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+li,
+a {
+  text-decoration: none !important;
+  list-style: none;
+}
+html {
+  overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
+}

@@ -1,0 +1,18 @@
+{% extends 'index.html' %}
+
+{% block titlechange %} 
+  Not found 404
+{% endblock %}
+
+{% block content %}
+  <div class="grid-error">
+    <div class="grid-error_responsive__img">
+      <img src="{{ url_for('static', filename='images/error.svg') }}" alt="not found" >
+    </div>
+    <div class="grid-error_text">
+      <h1>404 NOT FOUND</h1>
+      <p>We did not find the page you were looking for, but you can go back to the beginning, you want to go.</p>
+      <a href="{{ url_for('index') }}" class="button-all">Go to home</a>
+    </div>
+  </div>
+{% endblock %}

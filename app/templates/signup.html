@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+
+{% block titlechange %} 
+  Sign up
+{% endblock %}
+
+{% block content %}
+
+<div class="grid-error">
+  <div class="grid-error_responsive__img">
+    <img src="{{ url_for('static', filename='images/signup.svg') }}" alt="not found" >
+  </div>
+  <div class="grid-error_text">
+    <div class="controler-desing">
+      {% for message in get_flashed_messages() %}
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      {% endfor %}
+      <h1 style="font-size: 1.2rem;text-align: center;margin: 2rem 0;font-weight: bold;letter-spacing: 0.1em;">Organize your tasks, in simple steps ¡Register now!</h1>
+    
+      <div class="container">
+        <form action="{{ url_for('signup')}}" method="POST" class="someform">
+          {{signup_form.fullname.label(class_="form-label")}} 
+          {{signup_form.fullname(class_="form-control")}} 
+          {{signup_form.password.label(class_="form-label")}} 
+          {{signup_form.password(class_="form-control")}}
+          {{signup_form.submit(class_="button-all")}} 
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
