@@ -16,10 +16,10 @@ A simple application, developed with the python micro framework, Flask, and also
 `source deploy.sh`
 ## Screenshots
 
-<img src="./images/imag2.png" />
-<img src="./images/imag3.png" />
-<img src="./images/imag4.png" />
-<img src="./images/imag1.png" />
+<img src="./images/imag2.png" /><br/><br/><br/>
+<img src="./images/imag3.png" /><br/><br/><br/>
+<img src="./images/imag4.png" /><br/><br/><br/>
+<img src="./images/imag1.png" /><br/><br/><br/>
 
 ## Technologies used in the project 🛠 
 
