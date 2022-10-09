@@ -14,7 +14,12 @@ A simple application, developed with the python micro framework, Flask, and also
 `pip install -r requirements.txt`
 1. Use the app. <br/>
 `source deploy.sh`
+## Screenshots
 
+<img src="./images/imag2.png" />
+<img src="./images/imag3.png" />
+<img src="./images/imag4.png" />
+<img src="./images/imag1.png" />
 
 ## Technologies used in the project 🛠 
 
