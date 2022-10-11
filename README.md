@@ -15,10 +15,13 @@ A simple application, developed with the python micro framework, Flask, and also
 1. Use the app. <br/>
 `source deploy.sh`
 ## Screenshots
-
+- main
 <img src="./images/imag2.png" /><br/><br/><br/>
+- register
 <img src="./images/imag3.png" /><br/><br/><br/>
+- login
 <img src="./images/imag4.png" /><br/><br/><br/>
+- 404 not found
 <img src="./images/imag1.png" /><br/><br/><br/>
 
 ## Technologies used in the project 🛠 
